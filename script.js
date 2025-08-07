@@ -1,14 +1,104 @@
+// Dicas e exemplos específicos para cada exercício
+const exerciseHelp = {
+    1: {
+        title: "Criando Parágrafos",
+        tips: [
+            "Use a tag <p> para criar parágrafos",
+            "Não esqueça de fechar a tag com </p>",
+            "Você pode criar vários parágrafos seguidos"
+        ],
+        example: `<p>Este é um exemplo de parágrafo!</p>
+<p>Você pode criar quantos parágrafos quiser.</p>`
+    },
+    2: {
+        title: "Trabalhando com Títulos",
+        tips: [
+            "h1 é o título mais importante",
+            "Use h2 para subtítulos",
+            "A hierarquia vai de h1 até h6"
+        ],
+        example: `<h1>Título Principal</h1>
+<h2>Subtítulo interessante</h2>`
+    }
+    // Adicione mais exercícios aqui...
+};
+
+// Função para atualizar o painel de ajuda
+function atualizarPainelAjuda(numero) {
+    const helpPanel = document.getElementById('current-exercise-help');
+    const help = exerciseHelp[numero] || {
+        title: `Exercício ${numero}`,
+        tips: ["Selecione um exercício para ver dicas específicas"],
+        example: "// Exemplo será mostrado aqui"
+    };
+
+    helpPanel.innerHTML = `
+        <h4>📝 ${help.title}</h4>
+        <div class="example-card">
+            <h5>✨ Dicas:</h5>
+            <ul class="help-tips">
+                ${help.tips.map(tip => `<li>${tip}</li>`).join('')}
+            </ul>
+            <h5>📝 Exemplo:</h5>
+            <pre>${help.example}</pre>
+            <div class="result">
+                <h5>🎯 Resultado:</h5>
+                ${help.example}
+            </div>
+        </div>
+    `;
+}
+
+// Função para atualizar a barra de progresso
+function atualizarProgresso() {
+    const total = 20;
+    let completed = 0;
+    
+    for (let i = 1; i <= total; i++) {
+        const textarea = document.getElementById(`exercicio${i}`);
+        if (textarea && textarea.value.trim() !== '' && 
+            textarea.value !== exemplosIniciais[i]) {
+            completed++;
+        }
+    }
+
+    const progressBar = document.getElementById('progress-bar-fill');
+    const progressText = document.getElementById('progress-text');
+    const percentage = (completed / total) * 100;
+    
+    progressBar.style.width = `${percentage}%`;
+    progressText.textContent = `${completed} de ${total} exercícios completados`;
+}
+
 // Função genérica para executar exercícios
 function executarExercicio(numero) {
     const codigo = document.getElementById('exercicio' + numero).value;
     document.getElementById('resultado' + numero).innerHTML = codigo;
+    atualizarProgresso();
 }
 
 // Configurar funções para cada exercício
 for (let i = 1; i <= 20; i++) {
-    window['executarExercicio' + i] = function() {
-        executarExercicio(i);
-    };
+    const textArea = document.getElementById('exercicio' + i);
+    if (textArea) {
+        // Atualizar ao clicar no botão
+        window['executarExercicio' + i] = function() {
+            executarExercicio(i);
+        };
+        
+        // Atualizar o painel de ajuda quando o textarea recebe foco
+        textArea.addEventListener('focus', function() {
+            atualizarPainelAjuda(i);
+        });
+        
+        // Atualizar o painel de ajuda quando clicar no botão executar
+        const button = textArea.parentElement.querySelector('button');
+        if (button) {
+            button.addEventListener('click', function() {
+                atualizarPainelAjuda(i);
+            });
+        }
+    }
 }
 
 // Exemplos e dicas iniciais para cada exercício
