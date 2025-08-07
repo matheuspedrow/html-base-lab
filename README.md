@@ -6,7 +6,7 @@ Este projeto é como um jogo mágico que vai te ensinar a criar sites na interne
 
 ## 📋 O que você vai aprender?
 
-- 🌟 Como criar páginas web do zero
+- 🌟 Como criar páginas web.
 - 🎨 Como fazer textos bonitos e coloridos
 - 🖼️ Como colocar imagens nos seus sites
 - 📝 Como criar formulários e botões
