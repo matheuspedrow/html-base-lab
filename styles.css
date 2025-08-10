@@ -469,6 +469,12 @@ a:hover {
   display: block;
 }
 
+/* Espaçamento entre botões de ação nos blocos de código */
+.codigo button {
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
 /* Responsividade */
 @media (max-width: 1024px) {
   .sidebar {

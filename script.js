@@ -410,6 +410,95 @@ for (let i = 1; i <= 20; i++) {
       salvarResposta(i, textArea.value);
       atualizarProgresso();
     });
+
+    // ------- Extensões: Checar e Mostrar Resposta (HTML) -------
+    // Injetar botões e áreas auxiliares
+    const codigoDiv = textArea.parentElement;
+    const execBtn = codigoDiv.querySelector("button");
+    const checkBtn = document.createElement("button");
+    checkBtn.textContent = "Checar";
+    checkBtn.id = `html-check-${i}`;
+    const showBtn = document.createElement("button");
+    showBtn.textContent = "Mostrar resposta";
+    showBtn.id = `html-show-${i}`;
+    const useBtn = document.createElement("button");
+    useBtn.textContent = "Usar resposta no editor";
+    useBtn.id = `html-use-${i}`;
+    useBtn.style.display = "none";
+    const solutionDiv = document.createElement("div");
+    solutionDiv.id = `html-solution-${i}`;
+    solutionDiv.style.display = "none";
+    solutionDiv.style.marginTop = "10px";
+    const solutionPre = document.createElement("pre");
+    solutionPre.className = "codigo-exemplo";
+    solutionPre.id = `html-solution-pre-${i}`;
+    solutionDiv.appendChild(solutionPre);
+    const feedbackDiv = document.createElement("div");
+    feedbackDiv.className = "dica";
+    feedbackDiv.id = `html-feedback-${i}`;
+    feedbackDiv.style.display = "none";
+
+    // Inserir após o botão Executar
+    if (execBtn && execBtn.nextSibling) {
+      codigoDiv.insertBefore(checkBtn, execBtn.nextSibling);
+      codigoDiv.insertBefore(showBtn, checkBtn.nextSibling);
+      codigoDiv.insertBefore(useBtn, showBtn.nextSibling);
+    } else {
+      codigoDiv.appendChild(checkBtn);
+      codigoDiv.appendChild(showBtn);
+      codigoDiv.appendChild(useBtn);
+    }
+    // Inserir áreas antes do resultado
+    const resultadoDiv = codigoDiv.querySelector(".resultado");
+    if (resultadoDiv) {
+      codigoDiv.insertBefore(solutionDiv, resultadoDiv);
+      codigoDiv.insertBefore(feedbackDiv, resultadoDiv);
+    } else {
+      codigoDiv.appendChild(solutionDiv);
+      codigoDiv.appendChild(feedbackDiv);
+    }
+
+    // Eventos
+    checkBtn.addEventListener("click", function () {
+      const ok = validarExercicioHTML(i, textArea.value || "");
+      feedbackDiv.style.display = "block";
+      const tips =
+        exerciseHelp[i] && exerciseHelp[i].tips ? exerciseHelp[i].tips : [];
+      const dica = tips.length ? `\nDica: ${tips[0]}` : "";
+      feedbackDiv.textContent = ok
+        ? "✅ Passou nos critérios básicos!"
+        : "❌ Ainda não está de acordo. Revise as instruções." + dica;
+      feedbackDiv.style.backgroundColor = ok ? "#e8f5e9" : "#ffebee";
+    });
+
+    showBtn.addEventListener("click", function () {
+      const hidden = solutionDiv.style.display === "none";
+      if (hidden) {
+        const sol =
+          exerciseHelp[i] && exerciseHelp[i].example
+            ? exerciseHelp[i].example
+            : "";
+        solutionPre.textContent = sol;
+        solutionDiv.style.display = "block";
+        useBtn.style.display = "inline-block";
+        showBtn.textContent = "Ocultar resposta";
+      } else {
+        solutionDiv.style.display = "none";
+        useBtn.style.display = "none";
+        showBtn.textContent = "Mostrar resposta";
+      }
+    });
+
+    useBtn.addEventListener("click", function () {
+      const sol =
+        exerciseHelp[i] && exerciseHelp[i].example
+          ? exerciseHelp[i].example
+          : "";
+      textArea.value = sol;
+      salvarResposta(i, sol);
+      executarExercicio(i);
+      feedbackDiv.style.display = "none";
+    });
   }
 }
 
@@ -436,6 +525,78 @@ const exemplosIniciais = {
   19: "<!-- Digite a citação aqui. Exemplo:\n<blockquote>\n  <p>A imaginação é mais importante que o conhecimento.</p>\n  <cite>Albert Einstein</cite>\n</blockquote> -->",
   20: '<!-- Digite o mini site aqui. Exemplo:\n<header style="background-color: #f0f0f0; padding: 10px;">\n  <h1>Meu Site</h1>\n</header>\n<nav style="background-color: #e0e0e0; padding: 10px;">\n  <a href="#home">Home</a> |\n  <a href="#sobre">Sobre</a> |\n  <a href="#contato">Contato</a>\n</nav>\n<main style="padding: 20px;">\n  <h2>Bem-vindo!</h2>\n  <p>Este é o conteúdo principal do site.</p>\n</main>\n<footer style="background-color: #f0f0f0; padding: 10px; text-align: center;">\n  &copy; 2024 Meu Site\n</footer> -->',
 };
+// Validadores HTML devem vir antes do uso
+const validadoresHTML = {
+  1: (root) => root.querySelectorAll("p").length >= 1,
+  2: (root) => root.querySelector("h1") && root.querySelector("h2"),
+  3: (root) => {
+    const a = root.querySelector("a[href]");
+    if (!a) return false;
+    return a.getAttribute("target") === "_blank";
+  },
+  4: (root) => {
+    const ul = root.querySelector("ul");
+    return !!ul && ul.querySelectorAll("li").length >= 3;
+  },
+  5: (root) => {
+    const img = root.querySelector("img[src]");
+    return !!img && img.hasAttribute("alt");
+  },
+  6: (root) =>
+    root.querySelector("form") &&
+    root.querySelector("textarea") &&
+    root.querySelectorAll("input").length >= 2,
+  7: (root) => {
+    return Array.from(root.querySelectorAll("*")).some(
+      (el) =>
+        ((el.getAttribute && el.getAttribute("style")) || "").match(
+          /color\s*:/i,
+        ) && (el.getAttribute("style") || "").match(/font-size\s*:/i),
+    );
+  },
+  8: (root) => {
+    const table = root.querySelector("table");
+    if (!table) return false;
+    const rows = table.querySelectorAll("tr");
+    return rows.length >= 2 && rows[0].querySelectorAll("td,th").length >= 3;
+  },
+  9: (root) => root.querySelector("div") && root.querySelector("span"),
+  10: (root) =>
+    root.querySelector("img") &&
+    (root.querySelector("h1, h2") || root.querySelector("p")) &&
+    root.querySelector("ul, ol"),
+  11: (root) => {
+    const ol = root.querySelector("ol");
+    return !!ol && ol.querySelectorAll("li").length >= 3;
+  },
+  12: (root) => root.querySelector("br"),
+  13: (root) => root.querySelector("hr"),
+  14: (root) => root.querySelector('input[type="password"]'),
+  15: (root) => root.querySelector("table th") !== null,
+  16: (root) => root.querySelector("em") && root.querySelector("strong"),
+  17: (root) =>
+    (root.querySelector("nav") || root.querySelector("ul")) &&
+    root.querySelector("li a"),
+  18: (root) => root.querySelectorAll("img").length >= 3,
+  19: (root) => root.querySelector("blockquote") && root.querySelector("cite"),
+  20: (root) =>
+    root.querySelector("header") &&
+    root.querySelector("nav") &&
+    root.querySelector("main") &&
+    root.querySelector("footer"),
+};
+
+function validarExercicioHTML(numero, htmlUsuario) {
+  const container = document.createElement("div");
+  container.innerHTML = htmlUsuario || "";
+  const val = validadoresHTML[numero];
+  if (!val) return false;
+  try {
+    return !!val(container);
+  } catch (_) {
+    return false;
+  }
+}
 
 // Função para controlar as abas
 function inicializarAbas() {
@@ -490,7 +651,8 @@ window.onload = function () {
     const el = document.getElementById("exercicio" + numero);
     if (!el) return;
     const salvo = carregarResposta(numero);
-    el.value = salvo !== null ? salvo : exemplosIniciais[numero];
+    // Início limpo: não preencher com exemplos comentados
+    el.value = salvo !== null ? salvo : "";
     // Restaurar resultado salvo (opcional)
     const res = document.getElementById("resultado" + numero);
     const salvoResultado = carregarResultado(numero);
@@ -681,7 +843,7 @@ function initCssExercicios() {
 
     const salvo = localStorage.getItem(`htmlBase:css:answer:${ex.id}`);
     // Início limpo: vazio se não houver salvo. Mostramos apenas dica.
-    ta.value = salvo !== null ? salvo : '';
+    ta.value = salvo !== null ? salvo : "";
     escreverPreviewCss(iframe, ta.value, ex.html);
 
     ta.addEventListener("input", () => {
@@ -697,10 +859,10 @@ function initCssExercicios() {
       const doc = iframe.contentDocument || iframe.contentWindow.document;
       const ok = ex.validar(doc);
       fb.style.display = "block";
-      const dica = ex.hint ? `\nDica: ${ex.hint}` : '';
+      const dica = ex.hint ? `\nDica: ${ex.hint}` : "";
       fb.textContent = ok
         ? "✅ Passou nos critérios básicos!"
-        : ("❌ Ainda não está de acordo. Revise as instruções." + dica);
+        : "❌ Ainda não está de acordo. Revise as instruções." + dica;
       fb.style.backgroundColor = ok ? "#e8f5e9" : "#ffebee";
     });
 
