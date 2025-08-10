@@ -26,7 +26,7 @@ Este projeto é como um jogo mágico que vai te ensinar a criar sites na interne
 ### Passo 1: Baixar o Projeto 📥
 
 1. **Clique no botão verde** que diz "Code" no topo desta página
-2. **Clique em "Download ZIP"** 
+2. **Clique em "Download ZIP"**
 3. **Aguarde o download terminar** (pode demorar alguns segundos)
 
 ### Passo 2: Extrair os Arquivos 📁
@@ -64,11 +64,13 @@ Este projeto é como um jogo mágico que vai te ensinar a criar sites na interne
 ## 🎯 Como usar o curso?
 
 ### Na Aba "Teoria e Conceitos" 📚
+
 - Leia as explicações divertidas
 - Veja os exemplos práticos
 - Entenda como o HTML funciona
 
 ### Na Aba "Exercícios Práticos" 💻
+
 1. **Escolha um exercício** (comece pelo 1!)
 2. **Leia o que você precisa fazer**
 3. **Digite seu código** na caixa de texto
@@ -76,6 +78,7 @@ Este projeto é como um jogo mágico que vai te ensinar a criar sites na interne
 5. **Veja as dicas** no painel direito
 
 ### No Painel Direito 🎓
+
 - **Dicas específicas** para cada exercício
 - **Exemplos práticos** que você pode copiar
 - **Links úteis** para aprender mais
@@ -92,16 +95,19 @@ Este projeto é como um jogo mágico que vai te ensinar a criar sites na interne
 ## 🆘 Se algo não funcionar...
 
 ### O Go Live não aparece?
+
 - Verifique se instalou a extensão "Live Server"
 - Tente reiniciar o VS Code
 - Certifique-se de que clicou com o botão direito no arquivo `index.html`
 
 ### A página não abre?
+
 - Verifique se todos os arquivos estão na mesma pasta
 - Certifique-se de que o arquivo se chama `index.html`
 - Tente abrir o arquivo diretamente no navegador
 
 ### O código não funciona?
+
 - Verifique se você fechou todas as tags (ex: `<p>` precisa de `</p>`)
 - Copie e cole um exemplo do painel direito para testar
 - Leia as dicas específicas do exercício
@@ -109,13 +115,14 @@ Este projeto é como um jogo mágico que vai te ensinar a criar sites na interne
 ## 📞 Precisa de ajuda?
 
 Se você tiver dúvidas ou algo não funcionar:
+
 1. **Pergunte para para o professor ou seu colega, somos um time!**
-2. **Procure nos links úteis** 
+2. **Procure nos links úteis**
 3. **Tente novamente** - programadores também erram muito!
 
 ## 🎉 Parabéns!
 
-Você está começando uma jornada incrível no mundo da programação! Cada exercício que você completar te torna um programador mais forte. 
+Você está começando uma jornada incrível no mundo da programação! Cada exercício que você completar te torna um programador mais forte.
 
 Lembre-se: **Todo programador famoso começou exatamente como você** - com curiosidade e vontade de aprender! 🌟
 

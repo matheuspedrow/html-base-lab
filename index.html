@@ -1,199 +1,291 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aprenda HTML - Curso Interativo</title>
     <!-- Importando o arquivo CSS externo -->
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <!-- Painel lateral com as tags HTML -->
     <div class="sidebar">
-        <h3>Guia de Tags HTML</h3>
-        <ul class="tag-list">
-            <li class="tag-item">
-                <div class="tag-name">&lt;p&gt;</div>
-                <div class="tag-description">Define um parágrafo de texto.</div>
-            </li>
-            <li class="tag-item">
-                <div class="tag-name">&lt;h1&gt; até &lt;h6&gt;</div>
-                <div class="tag-description">Títulos e subtítulos, onde h1 é o mais importante e h6 o menos importante.</div>
-            </li>
-            <li class="tag-item">
-                <div class="tag-name">&lt;a&gt;</div>
-                <div class="tag-description">Cria links para outras páginas ou recursos. Use href="" para definir o destino.</div>
-            </li>
-            <li class="tag-item">
-                <div class="tag-name">&lt;img&gt;</div>
-                <div class="tag-description">Insere imagens. Requer src="" para o caminho da imagem e alt="" para descrição.</div>
-            </li>
-            <li class="tag-item">
-                <div class="tag-name">&lt;ul&gt; e &lt;li&gt;</div>
-                <div class="tag-description">Lista não ordenada (ul) e itens da lista (li).</div>
-            </li>
-            <li class="tag-item">
-                <div class="tag-name">&lt;ol&gt;</div>
-                <div class="tag-description">Lista ordenada (numerada). Use com &lt;li&gt; para os itens.</div>
-            </li>
-            <li class="tag-item">
-                <div class="tag-name">&lt;div&gt;</div>
-                <div class="tag-description">Container genérico para agrupar elementos e criar layouts.</div>
-            </li>
-            <li class="tag-item">
-                <div class="tag-name">&lt;span&gt;</div>
-                <div class="tag-description">Container inline para texto e elementos pequenos.</div>
-            </li>
-            <li class="tag-item">
-                <div class="tag-name">&lt;table&gt;, &lt;tr&gt;, &lt;td&gt;</div>
-                <div class="tag-description">Cria tabelas: table (tabela), tr (linha), td (célula).</div>
-            </li>
-            <li class="tag-item">
-                <div class="tag-name">&lt;form&gt;</div>
-                <div class="tag-description">Cria formulários para entrada de dados.</div>
-            </li>
-            <li class="tag-item">
-                <div class="tag-name">&lt;input&gt;</div>
-                <div class="tag-description">Campo de entrada em formulários. Tipos: text, email, password, etc.</div>
-            </li>
-            <li class="tag-item">
-                <div class="tag-name">&lt;button&gt;</div>
-                <div class="tag-description">Cria botões clicáveis.</div>
-            </li>
-            <li class="tag-item">
-                <div class="tag-name">&lt;textarea&gt;</div>
-                <div class="tag-description">Campo de texto multilinha para formulários.</div>
-            </li>
-            <li class="tag-item">
-                <div class="tag-name">&lt;br&gt;</div>
-                <div class="tag-description">Quebra de linha.</div>
-            </li>
-            <li class="tag-item">
-                <div class="tag-name">&lt;hr&gt;</div>
-                <div class="tag-description">Linha horizontal para separação de conteúdo.</div>
-            </li>
-            <li class="tag-item">
-                <div class="tag-name">&lt;strong&gt;</div>
-                <div class="tag-description">Texto em negrito, usado para destacar conteúdo importante.</div>
-            </li>
-            <li class="tag-item">
-                <div class="tag-name">&lt;em&gt;</div>
-                <div class="tag-description">Texto em itálico, usado para dar ênfase.</div>
-            </li>
-            <li class="tag-item">
-                <div class="tag-name">&lt;header&gt;</div>
-                <div class="tag-description">Define o cabeçalho de uma página ou seção.</div>
-            </li>
-            <li class="tag-item">
-                <div class="tag-name">&lt;footer&gt;</div>
-                <div class="tag-description">Define o rodapé de uma página ou seção.</div>
-            </li>
-            <li class="tag-item">
-                <div class="tag-name">&lt;nav&gt;</div>
-                <div class="tag-description">Define uma seção de navegação com links.</div>
-            </li>
-            <li class="tag-item">
-                <div class="tag-name">&lt;main&gt;</div>
-                <div class="tag-description">Define o conteúdo principal da página.</div>
-            </li>
-            <li class="tag-item">
-                <div class="tag-name">&lt;blockquote&gt;</div>
-                <div class="tag-description">Usado para citações longas de outros textos.</div>
-            </li>
-            <li class="tag-item">
-                <div class="tag-name">&lt;cite&gt;</div>
-                <div class="tag-description">Define o autor ou fonte de uma citação.</div>
-            </li>
+      <h3>Guia de Tags HTML</h3>
+      <ul class="tag-list">
+        <li class="tag-item">
+          <div class="tag-name">&lt;p&gt;</div>
+          <div class="tag-description">Define um parágrafo de texto.</div>
+        </li>
+        <li class="tag-item">
+          <div class="tag-name">&lt;h1&gt; até &lt;h6&gt;</div>
+          <div class="tag-description">
+            Títulos e subtítulos, onde h1 é o mais importante e h6 o menos
+            importante.
+          </div>
+        </li>
+        <li class="tag-item">
+          <div class="tag-name">&lt;a&gt;</div>
+          <div class="tag-description">
+            Cria links para outras páginas ou recursos. Use href="" para definir
+            o destino.
+          </div>
+        </li>
+        <li class="tag-item">
+          <div class="tag-name">&lt;img&gt;</div>
+          <div class="tag-description">
+            Insere imagens. Requer src="" para o caminho da imagem e alt="" para
+            descrição.
+          </div>
+        </li>
+        <li class="tag-item">
+          <div class="tag-name">&lt;ul&gt; e &lt;li&gt;</div>
+          <div class="tag-description">
+            Lista não ordenada (ul) e itens da lista (li).
+          </div>
+        </li>
+        <li class="tag-item">
+          <div class="tag-name">&lt;ol&gt;</div>
+          <div class="tag-description">
+            Lista ordenada (numerada). Use com &lt;li&gt; para os itens.
+          </div>
+        </li>
+        <li class="tag-item">
+          <div class="tag-name">&lt;div&gt;</div>
+          <div class="tag-description">
+            Container genérico para agrupar elementos e criar layouts.
+          </div>
+        </li>
+        <li class="tag-item">
+          <div class="tag-name">&lt;span&gt;</div>
+          <div class="tag-description">
+            Container inline para texto e elementos pequenos.
+          </div>
+        </li>
+        <li class="tag-item">
+          <div class="tag-name">&lt;table&gt;, &lt;tr&gt;, &lt;td&gt;</div>
+          <div class="tag-description">
+            Cria tabelas: table (tabela), tr (linha), td (célula).
+          </div>
+        </li>
+        <li class="tag-item">
+          <div class="tag-name">&lt;form&gt;</div>
+          <div class="tag-description">
+            Cria formulários para entrada de dados.
+          </div>
+        </li>
+        <li class="tag-item">
+          <div class="tag-name">&lt;input&gt;</div>
+          <div class="tag-description">
+            Campo de entrada em formulários. Tipos: text, email, password, etc.
+          </div>
+        </li>
+        <li class="tag-item">
+          <div class="tag-name">&lt;button&gt;</div>
+          <div class="tag-description">Cria botões clicáveis.</div>
+        </li>
+        <li class="tag-item">
+          <div class="tag-name">&lt;textarea&gt;</div>
+          <div class="tag-description">
+            Campo de texto multilinha para formulários.
+          </div>
+        </li>
+        <li class="tag-item">
+          <div class="tag-name">&lt;br&gt;</div>
+          <div class="tag-description">Quebra de linha.</div>
+        </li>
+        <li class="tag-item">
+          <div class="tag-name">&lt;hr&gt;</div>
+          <div class="tag-description">
+            Linha horizontal para separação de conteúdo.
+          </div>
+        </li>
+        <li class="tag-item">
+          <div class="tag-name">&lt;strong&gt;</div>
+          <div class="tag-description">
+            Texto em negrito, usado para destacar conteúdo importante.
+          </div>
+        </li>
+        <li class="tag-item">
+          <div class="tag-name">&lt;em&gt;</div>
+          <div class="tag-description">
+            Texto em itálico, usado para dar ênfase.
+          </div>
+        </li>
+        <li class="tag-item">
+          <div class="tag-name">&lt;header&gt;</div>
+          <div class="tag-description">
+            Define o cabeçalho de uma página ou seção.
+          </div>
+        </li>
+        <li class="tag-item">
+          <div class="tag-name">&lt;footer&gt;</div>
+          <div class="tag-description">
+            Define o rodapé de uma página ou seção.
+          </div>
+        </li>
+        <li class="tag-item">
+          <div class="tag-name">&lt;nav&gt;</div>
+          <div class="tag-description">
+            Define uma seção de navegação com links.
+          </div>
+        </li>
+        <li class="tag-item">
+          <div class="tag-name">&lt;main&gt;</div>
+          <div class="tag-description">
+            Define o conteúdo principal da página.
+          </div>
+        </li>
+        <li class="tag-item">
+          <div class="tag-name">&lt;blockquote&gt;</div>
+          <div class="tag-description">
+            Usado para citações longas de outros textos.
+          </div>
+        </li>
+        <li class="tag-item">
+          <div class="tag-name">&lt;cite&gt;</div>
+          <div class="tag-description">
+            Define o autor ou fonte de uma citação.
+          </div>
+        </li>
+      </ul>
+      <div class="dica-sidebar">
+        <h4>💡 Lembre-se:</h4>
+        <ul>
+          <li>
+            A maioria das tags precisa ser fechada:
+            &lt;tag&gt;conteúdo&lt;/tag&gt;
+          </li>
+          <li>
+            Algumas tags são "vazias" e não precisam fechar: &lt;img&gt;,
+            &lt;br&gt;, &lt;hr&gt;
+          </li>
+          <li>Use indentação para organizar seu código</li>
+          <li>Mantenha as tags organizadas e alinhadas</li>
         </ul>
-        <div class="dica-sidebar">
-            <h4>💡 Lembre-se:</h4>
-            <ul>
-                <li>A maioria das tags precisa ser fechada: &lt;tag&gt;conteúdo&lt;/tag&gt;</li>
-                <li>Algumas tags são "vazias" e não precisam fechar: &lt;img&gt;, &lt;br&gt;, &lt;hr&gt;</li>
-                <li>Use indentação para organizar seu código</li>
-                <li>Mantenha as tags organizadas e alinhadas</li>
-            </ul>
-        </div>
+      </div>
     </div>
 
     <!-- Conteúdo principal -->
     <div class="main-content">
-        <h1>Bem-vindo ao Curso Interativo de HTML! 🚀</h1>
+      <h1>Bem-vindo ao Curso Interativo de HTML! 🚀</h1>
 
-        <!-- Sistema de abas -->
-        <div class="tabs">
-            <button class="tab-button" data-aba="teoria">📚 Teoria e Conceitos</button>
-            <button class="tab-button" data-aba="exercicios">💻 Exercícios Práticos</button>
-        </div>
+      <!-- Sistema de abas -->
+      <div class="tabs">
+        <button class="tab-button" data-aba="teoria">
+          📚 Teoria e Conceitos
+        </button>
+        <button class="tab-button" data-aba="exercicios">
+          💻 Exercícios Práticos
+        </button>
+        <button class="tab-button" data-aba="exercicios-css">
+          🎨 Exercícios CSS
+        </button>
+      </div>
 
-        <!-- Conteúdo da aba de teoria -->
-        <div id="teoria" class="tab-content">
-            <div class="secao introducao">
-        <h2>Bem-vindo ao Mundo da Programação! 🌟</h2>
-        <p>Antes de começarmos, algumas coisas importantes que você precisa saber:</p>
-        
-        <div class="conceito-basico">
+      <!-- Conteúdo da aba de teoria -->
+      <div id="teoria" class="tab-content">
+        <div class="secao introducao">
+          <h2>Bem-vindo ao Mundo da Programação! 🌟</h2>
+          <p>
+            Antes de começarmos, algumas coisas importantes que você precisa
+            saber:
+          </p>
+
+          <div class="conceito-basico">
             <h3>🤔 O que é Programação Web?</h3>
-            <p>Programação web é como construir uma casa na internet! Cada site que você visita foi construído por alguém usando códigos especiais.</p>
-        </div>
+            <p>
+              Programação web é como construir uma casa na internet! Cada site
+              que você visita foi construído por alguém usando códigos
+              especiais.
+            </p>
+          </div>
 
-        <div class="conceito-basico">
+          <div class="conceito-basico">
             <h3>🏗️ O que é HTML?</h3>
-            <p>HTML (HyperText Markup Language) é como os blocos de construção dessa casa. É a linguagem que usamos para criar a estrutura de todas as páginas web que você vê na internet!</p>
-        </div>
+            <p>
+              HTML (HyperText Markup Language) é como os blocos de construção
+              dessa casa. É a linguagem que usamos para criar a estrutura de
+              todas as páginas web que você vê na internet!
+            </p>
+          </div>
 
-        <div class="conceito-basico">
+          <div class="conceito-basico">
             <h3>📝 Como Funciona?</h3>
-            <p>No HTML, usamos "tags" (marcações) para dizer ao computador o que cada parte do site significa. Por exemplo:</p>
+            <p>
+              No HTML, usamos "tags" (marcações) para dizer ao computador o que
+              cada parte do site significa. Por exemplo:
+            </p>
             <ul class="exemplo-lista">
-                <li>&lt;p&gt; significa "isto é um parágrafo"</li>
-                <li>&lt;h1&gt; significa "isto é um título importante"</li>
-                <li>&lt;img&gt; significa "aqui vai uma imagem"</li>
+              <li>&lt;p&gt; significa "isto é um parágrafo"</li>
+              <li>&lt;h1&gt; significa "isto é um título importante"</li>
+              <li>&lt;img&gt; significa "aqui vai uma imagem"</li>
             </ul>
-        </div>
+          </div>
 
-        <div class="conceito-basico">
+          <div class="conceito-basico">
             <h3>🎯 Como Usar Este Tutorial</h3>
             <ul class="tutorial-lista">
-                <li>👉 Do lado esquerdo, você encontra um guia rápido de todas as tags HTML que vamos usar</li>
-                <li>📝 Em cada exercício, você verá um exemplo e poderá escrever seu próprio código</li>
-                <li>▶️ Clique em "Executar" para ver o resultado do seu código</li>
-                <li>💡 Preste atenção nas dicas em cada exercício</li>
-                <li>🔄 Você pode tentar quantas vezes quiser!</li>
+              <li>
+                👉 Do lado esquerdo, você encontra um guia rápido de todas as
+                tags HTML que vamos usar
+              </li>
+              <li>
+                📝 Em cada exercício, você verá um exemplo e poderá escrever seu
+                próprio código
+              </li>
+              <li>
+                ▶️ Clique em "Executar" para ver o resultado do seu código
+              </li>
+              <li>💡 Preste atenção nas dicas em cada exercício</li>
+              <li>🔄 Você pode tentar quantas vezes quiser!</li>
             </ul>
-        </div>
+          </div>
 
-        <div class="dica-importante">
+          <div class="dica-importante">
             <h3>🌟 Dicas para Iniciantes:</h3>
             <ul>
-                <li>Não tenha medo de errar - erros são parte do aprendizado!</li>
-                <li>Experimente modificar os exemplos para ver o que acontece</li>
-                <li>Se algo não funcionar, verifique se você fechou todas as tags</li>
-                <li>Toda tag que abre com &lt;tag&gt; precisa fechar com &lt;/tag&gt;</li>
-                <li>Copie e cole os exemplos se precisar - isso também é aprender!</li>
+              <li>Não tenha medo de errar - erros são parte do aprendizado!</li>
+              <li>Experimente modificar os exemplos para ver o que acontece</li>
+              <li>
+                Se algo não funcionar, verifique se você fechou todas as tags
+              </li>
+              <li>
+                Toda tag que abre com &lt;tag&gt; precisa fechar com
+                &lt;/tag&gt;
+              </li>
+              <li>
+                Copie e cole os exemplos se precisar - isso também é aprender!
+              </li>
             </ul>
-        </div>
+          </div>
 
-        <!-- Seção adicional de teoria -->
-        <div class="secao">
+          <!-- Seção adicional de teoria -->
+          <div class="secao">
             <h2>🏗️ Estrutura Básica do HTML</h2>
             <div class="conceito-basico">
-                <h3>Anatomia de uma Tag HTML</h3>
-                <pre class="codigo-exemplo">
+              <h3>Anatomia de uma Tag HTML</h3>
+              <pre class="codigo-exemplo">
 &lt;tag atributo="valor"&gt;
     conteúdo
-&lt;/tag&gt;</pre>
-                <ul class="explicacao-lista">
-                    <li>🔍 <strong>tag</strong>: Nome do elemento HTML (p, div, span, etc)</li>
-                    <li>🎨 <strong>atributo</strong>: Propriedade adicional (class, id, style, etc)</li>
-                    <li>📝 <strong>valor</strong>: Valor do atributo</li>
-                    <li>📄 <strong>conteúdo</strong>: O que vai dentro da tag</li>
-                </ul>
+&lt;/tag&gt;</pre
+              >
+              <ul class="explicacao-lista">
+                <li>
+                  🔍 <strong>tag</strong>: Nome do elemento HTML (p, div, span,
+                  etc)
+                </li>
+                <li>
+                  🎨 <strong>atributo</strong>: Propriedade adicional (class,
+                  id, style, etc)
+                </li>
+                <li>📝 <strong>valor</strong>: Valor do atributo</li>
+                <li>📄 <strong>conteúdo</strong>: O que vai dentro da tag</li>
+              </ul>
             </div>
 
             <div class="conceito-basico">
-                <h3>Estrutura de uma Página HTML</h3>
-                <pre class="codigo-exemplo">
+              <h3>Estrutura de uma Página HTML</h3>
+              <pre class="codigo-exemplo">
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
@@ -202,330 +294,488 @@
     &lt;body&gt;
         Conteúdo da página
     &lt;/body&gt;
-&lt;/html&gt;</pre>
-                <ul class="explicacao-lista">
-                    <li>📄 <strong>&lt;!DOCTYPE html&gt;</strong>: Declara que é um documento HTML5</li>
-                    <li>🌐 <strong>&lt;html&gt;</strong>: Elemento raiz da página</li>
-                    <li>🧠 <strong>&lt;head&gt;</strong>: Informações sobre o documento</li>
-                    <li>👀 <strong>&lt;body&gt;</strong>: Conteúdo visível da página</li>
-                </ul>
+&lt;/html&gt;</pre
+              >
+              <ul class="explicacao-lista">
+                <li>
+                  📄 <strong>&lt;!DOCTYPE html&gt;</strong>: Declara que é um
+                  documento HTML5
+                </li>
+                <li>
+                  🌐 <strong>&lt;html&gt;</strong>: Elemento raiz da página
+                </li>
+                <li>
+                  🧠 <strong>&lt;head&gt;</strong>: Informações sobre o
+                  documento
+                </li>
+                <li>
+                  👀 <strong>&lt;body&gt;</strong>: Conteúdo visível da página
+                </li>
+              </ul>
             </div>
+          </div>
         </div>
+      </div>
+
+      <!-- Conteúdo da aba de exercícios -->
+      <div id="exercicios" class="tab-content">
+        <div class="secao">
+          <h2>Lista de Exercícios</h2>
+          <p>
+            Pratique seus conhecimentos HTML com os exercícios abaixo.
+            Lembre-se: a prática leva à perfeição! 🎯
+          </p>
         </div>
 
-        </div>
-
-        <!-- Conteúdo da aba de exercícios -->
-        <div id="exercicios" class="tab-content">
-            <div class="secao">
-                <h2>Lista de Exercícios</h2>
-                <p>Pratique seus conhecimentos HTML com os exercícios abaixo. Lembre-se: a prática leva à perfeição! 🎯</p>
-            </div>
-
-            <div class="secao">
-                <h2>Exercício 1: Sua primeira tag HTML</h2>
-        <div class="exercicio">
-            <p>Crie um parágrafo que diga "Olá, Mundo!" usando a tag &lt;p&gt;</p>
+        <div class="secao">
+          <h2>Exercício 1: Sua primeira tag HTML</h2>
+          <div class="exercicio">
+            <p>
+              Crie um parágrafo que diga "Olá, Mundo!" usando a tag &lt;p&gt;
+            </p>
             <div class="codigo">
-                <!-- Área de código para o exercício 1 -->
-                <textarea id="exercicio1" placeholder="Digite seu código aqui..."></textarea>
-                <button onclick="executarExercicio1()">Executar</button>
-                <div class="resultado" id="resultado1"></div>
+              <!-- Área de código para o exercício 1 -->
+              <textarea
+                id="exercicio1"
+                placeholder="Digite seu código aqui..."
+              ></textarea>
+              <button onclick="executarExercicio1()">Executar</button>
+              <div class="resultado" id="resultado1"></div>
             </div>
+          </div>
         </div>
-    </div>
 
-    <div class="secao">
-        <h2>Exercício 2: Títulos em HTML</h2>
-        <div class="exercicio">
-            <p>Crie um título principal usando a tag &lt;h1&gt; e um subtítulo usando &lt;h2&gt;</p>
+        <div class="secao">
+          <h2>Exercício 2: Títulos em HTML</h2>
+          <div class="exercicio">
+            <p>
+              Crie um título principal usando a tag &lt;h1&gt; e um subtítulo
+              usando &lt;h2&gt;
+            </p>
             <div class="codigo">
-                <textarea id="exercicio2" placeholder="Digite seu código aqui..."></textarea>
-                <button onclick="executarExercicio2()">Executar</button>
-                <div class="resultado" id="resultado2"></div>
+              <textarea
+                id="exercicio2"
+                placeholder="Digite seu código aqui..."
+              ></textarea>
+              <button onclick="executarExercicio2()">Executar</button>
+              <div class="resultado" id="resultado2"></div>
             </div>
+          </div>
         </div>
-    </div>
 
-    <div class="secao">
-        <h2>Exercício 3: Links</h2>
-        <div class="exercicio">
-            <p>Crie um link que aponte para "https://www.google.com" usando a tag &lt;a&gt; e faça ele abrir em uma nova aba com target="_blank"</p>
+        <div class="secao">
+          <h2>Exercício 3: Links</h2>
+          <div class="exercicio">
+            <p>
+              Crie um link que aponte para "https://www.google.com" usando a tag
+              &lt;a&gt; e faça ele abrir em uma nova aba com target="_blank"
+            </p>
             <div class="codigo">
-                <textarea id="exercicio3" placeholder="Digite seu código aqui..."></textarea>
-                <button onclick="executarExercicio3()">Executar</button>
-                <div class="resultado" id="resultado3"></div>
+              <textarea
+                id="exercicio3"
+                placeholder="Digite seu código aqui..."
+              ></textarea>
+              <button onclick="executarExercicio3()">Executar</button>
+              <div class="resultado" id="resultado3"></div>
             </div>
+          </div>
         </div>
-    </div>
 
-    <div class="secao">
-        <h2>Exercício 4: Listas</h2>
-        <div class="exercicio">
-            <p>Crie uma lista não ordenada (&lt;ul&gt;) com 3 itens (&lt;li&gt;) de suas frutas favoritas</p>
+        <div class="secao">
+          <h2>Exercício 4: Listas</h2>
+          <div class="exercicio">
+            <p>
+              Crie uma lista não ordenada (&lt;ul&gt;) com 3 itens (&lt;li&gt;)
+              de suas frutas favoritas
+            </p>
             <div class="codigo">
-                <textarea id="exercicio4" placeholder="Digite seu código aqui..."></textarea>
-                <button onclick="executarExercicio4()">Executar</button>
-                <div class="resultado" id="resultado4"></div>
+              <textarea
+                id="exercicio4"
+                placeholder="Digite seu código aqui..."
+              ></textarea>
+              <button onclick="executarExercicio4()">Executar</button>
+              <div class="resultado" id="resultado4"></div>
             </div>
+          </div>
         </div>
-    </div>
 
-    <div class="secao">
-        <h2>Exercício 5: Imagens</h2>
-        <div class="exercicio">
-            <p>Adicione uma imagem usando a tag &lt;img&gt;. Use o link: https://picsum.photos/200/300 para uma imagem de exemplo.</p>
+        <div class="secao">
+          <h2>Exercício 5: Imagens</h2>
+          <div class="exercicio">
+            <p>
+              Adicione uma imagem usando a tag &lt;img&gt;. Use o link:
+              https://picsum.photos/200/300 para uma imagem de exemplo.
+            </p>
             <div class="dica">
-                <strong>💡 Dica:</strong> Não se esqueça do atributo 'alt' para acessibilidade!
+              <strong>💡 Dica:</strong> Não se esqueça do atributo 'alt' para
+              acessibilidade!
             </div>
             <div class="codigo">
-                <textarea id="exercicio5" placeholder="Digite seu código aqui..."></textarea>
-                <button onclick="executarExercicio5()">Executar</button>
-                <div class="resultado" id="resultado5"></div>
+              <textarea
+                id="exercicio5"
+                placeholder="Digite seu código aqui..."
+              ></textarea>
+              <button onclick="executarExercicio5()">Executar</button>
+              <div class="resultado" id="resultado5"></div>
             </div>
+          </div>
         </div>
-    </div>
 
-    <div class="secao">
-        <h2>Exercício 6: Formulários</h2>
-        <div class="exercicio">
-            <p>Crie um formulário de contato com campos para nome, email e uma mensagem</p>
+        <div class="secao">
+          <h2>Exercício 6: Formulários</h2>
+          <div class="exercicio">
+            <p>
+              Crie um formulário de contato com campos para nome, email e uma
+              mensagem
+            </p>
             <div class="codigo">
-                <textarea id="exercicio6" placeholder="Digite seu código aqui..."></textarea>
-                <button onclick="executarExercicio6()">Executar</button>
-                <div class="resultado" id="resultado6"></div>
+              <textarea
+                id="exercicio6"
+                placeholder="Digite seu código aqui..."
+              ></textarea>
+              <button onclick="executarExercicio6()">Executar</button>
+              <div class="resultado" id="resultado6"></div>
             </div>
+          </div>
         </div>
-    </div>
 
-    <div class="secao">
-        <h2>Exercício 7: Estilização Básica</h2>
-        <div class="exercicio">
-            <p>Crie um parágrafo e adicione estilo inline usando o atributo style. Mude a cor do texto e o tamanho da fonte.</p>
+        <div class="secao">
+          <h2>Exercício 7: Estilização Básica</h2>
+          <div class="exercicio">
+            <p>
+              Crie um parágrafo e adicione estilo inline usando o atributo
+              style. Mude a cor do texto e o tamanho da fonte.
+            </p>
             <div class="dica">
-                <strong>💡 Dica:</strong> Use style="color: blue; font-size: 20px;"
+              <strong>💡 Dica:</strong> Use style="color: blue; font-size:
+              20px;"
             </div>
             <div class="codigo">
-                <textarea id="exercicio7" placeholder="Digite seu código aqui..."></textarea>
-                <button onclick="executarExercicio7()">Executar</button>
-                <div class="resultado" id="resultado7"></div>
+              <textarea
+                id="exercicio7"
+                placeholder="Digite seu código aqui..."
+              ></textarea>
+              <button onclick="executarExercicio7()">Executar</button>
+              <div class="resultado" id="resultado7"></div>
             </div>
+          </div>
         </div>
-    </div>
 
-    <div class="secao">
-        <h2>Exercício 8: Tabelas</h2>
-        <div class="exercicio">
-            <p>Crie uma tabela com 2 linhas e 3 colunas usando as tags &lt;table&gt;, &lt;tr&gt; e &lt;td&gt;</p>
+        <div class="secao">
+          <h2>Exercício 8: Tabelas</h2>
+          <div class="exercicio">
+            <p>
+              Crie uma tabela com 2 linhas e 3 colunas usando as tags
+              &lt;table&gt;, &lt;tr&gt; e &lt;td&gt;
+            </p>
             <div class="codigo">
-                <textarea id="exercicio8" placeholder="Digite seu código aqui..."></textarea>
-                <button onclick="executarExercicio8()">Executar</button>
-                <div class="resultado" id="resultado8"></div>
+              <textarea
+                id="exercicio8"
+                placeholder="Digite seu código aqui..."
+              ></textarea>
+              <button onclick="executarExercicio8()">Executar</button>
+              <div class="resultado" id="resultado8"></div>
             </div>
+          </div>
         </div>
-    </div>
 
-    <div class="secao">
-        <h2>Exercício 9: Divs e Spans</h2>
-        <div class="exercicio">
-            <p>Crie uma estrutura usando divs e spans com diferentes cores de fundo e texto</p>
+        <div class="secao">
+          <h2>Exercício 9: Divs e Spans</h2>
+          <div class="exercicio">
+            <p>
+              Crie uma estrutura usando divs e spans com diferentes cores de
+              fundo e texto
+            </p>
             <div class="dica">
-                <strong>💡 Dica:</strong> Use style="background-color: " para cores de fundo
+              <strong>💡 Dica:</strong> Use style="background-color: " para
+              cores de fundo
             </div>
             <div class="codigo">
-                <textarea id="exercicio9" placeholder="Digite seu código aqui..."></textarea>
-                <button onclick="executarExercicio9()">Executar</button>
-                <div class="resultado" id="resultado9"></div>
+              <textarea
+                id="exercicio9"
+                placeholder="Digite seu código aqui..."
+              ></textarea>
+              <button onclick="executarExercicio9()">Executar</button>
+              <div class="resultado" id="resultado9"></div>
             </div>
+          </div>
         </div>
-    </div>
 
-    <div class="secao">
-        <h2>Exercício 10: Mini Projeto</h2>
-        <div class="exercicio">
-            <p>Crie um cartão de perfil combinando vários elementos HTML (imagem, título, parágrafo, lista)</p>
+        <div class="secao">
+          <h2>Exercício 10: Mini Projeto</h2>
+          <div class="exercicio">
+            <p>
+              Crie um cartão de perfil combinando vários elementos HTML (imagem,
+              título, parágrafo, lista)
+            </p>
             <div class="dica">
-                <strong>💡 Dica:</strong> Use uma div principal para agrupar todos os elementos
+              <strong>💡 Dica:</strong> Use uma div principal para agrupar todos
+              os elementos
             </div>
             <div class="codigo">
-                <textarea id="exercicio10" placeholder="Digite seu código aqui..."></textarea>
-                <button onclick="executarExercicio10()">Executar</button>
-                <div class="resultado" id="resultado10"></div>
+              <textarea
+                id="exercicio10"
+                placeholder="Digite seu código aqui..."
+              ></textarea>
+              <button onclick="executarExercicio10()">Executar</button>
+              <div class="resultado" id="resultado10"></div>
             </div>
+          </div>
         </div>
-    </div>
 
-    <div class="secao">
-        <h2>Exercício 11: Lista Ordenada</h2>
-        <div class="exercicio">
-            <p>Crie uma lista ordenada (&lt;ol&gt;) com seus 3 filmes favoritos</p>
+        <div class="secao">
+          <h2>Exercício 11: Lista Ordenada</h2>
+          <div class="exercicio">
+            <p>
+              Crie uma lista ordenada (&lt;ol&gt;) com seus 3 filmes favoritos
+            </p>
             <div class="codigo">
-                <textarea id="exercicio11" placeholder="Digite seu código aqui..."></textarea>
-                <button onclick="executarExercicio11()">Executar</button>
-                <div class="resultado" id="resultado11"></div>
+              <textarea
+                id="exercicio11"
+                placeholder="Digite seu código aqui..."
+              ></textarea>
+              <button onclick="executarExercicio11()">Executar</button>
+              <div class="resultado" id="resultado11"></div>
             </div>
+          </div>
         </div>
-    </div>
 
-    <div class="secao">
-        <h2>Exercício 12: Quebras de Linha</h2>
-        <div class="exercicio">
-            <p>Escreva um poema usando parágrafos (&lt;p&gt;) e quebras de linha (&lt;br&gt;)</p>
+        <div class="secao">
+          <h2>Exercício 12: Quebras de Linha</h2>
+          <div class="exercicio">
+            <p>
+              Escreva um poema usando parágrafos (&lt;p&gt;) e quebras de linha
+              (&lt;br&gt;)
+            </p>
             <div class="codigo">
-                <textarea id="exercicio12" placeholder="Digite seu código aqui..."></textarea>
-                <button onclick="executarExercicio12()">Executar</button>
-                <div class="resultado" id="resultado12"></div>
+              <textarea
+                id="exercicio12"
+                placeholder="Digite seu código aqui..."
+              ></textarea>
+              <button onclick="executarExercicio12()">Executar</button>
+              <div class="resultado" id="resultado12"></div>
             </div>
+          </div>
         </div>
-    </div>
 
-    <div class="secao">
-        <h2>Exercício 13: Linha Horizontal</h2>
-        <div class="exercicio">
-            <p>Crie dois parágrafos separados por uma linha horizontal (&lt;hr&gt;)</p>
+        <div class="secao">
+          <h2>Exercício 13: Linha Horizontal</h2>
+          <div class="exercicio">
+            <p>
+              Crie dois parágrafos separados por uma linha horizontal
+              (&lt;hr&gt;)
+            </p>
             <div class="codigo">
-                <textarea id="exercicio13" placeholder="Digite seu código aqui..."></textarea>
-                <button onclick="executarExercicio13()">Executar</button>
-                <div class="resultado" id="resultado13"></div>
+              <textarea
+                id="exercicio13"
+                placeholder="Digite seu código aqui..."
+              ></textarea>
+              <button onclick="executarExercicio13()">Executar</button>
+              <div class="resultado" id="resultado13"></div>
             </div>
+          </div>
         </div>
-    </div>
 
-    <div class="secao">
-        <h2>Exercício 14: Formulário de Login</h2>
-        <div class="exercicio">
+        <div class="secao">
+          <h2>Exercício 14: Formulário de Login</h2>
+          <div class="exercicio">
             <p>Crie um formulário de login com campos para usuário e senha</p>
             <div class="dica">
-                <strong>💡 Dica:</strong> Use input type="password" para o campo de senha
+              <strong>💡 Dica:</strong> Use input type="password" para o campo
+              de senha
             </div>
             <div class="codigo">
-                <textarea id="exercicio14" placeholder="Digite seu código aqui..."></textarea>
-                <button onclick="executarExercicio14()">Executar</button>
-                <div class="resultado" id="resultado14"></div>
+              <textarea
+                id="exercicio14"
+                placeholder="Digite seu código aqui..."
+              ></textarea>
+              <button onclick="executarExercicio14()">Executar</button>
+              <div class="resultado" id="resultado14"></div>
             </div>
+          </div>
         </div>
-    </div>
 
-    <div class="secao">
-        <h2>Exercício 15: Tabela com Cabeçalho</h2>
-        <div class="exercicio">
-            <p>Crie uma tabela com cabeçalho (&lt;th&gt;) contendo informações de produtos: Nome, Preço e Quantidade</p>
+        <div class="secao">
+          <h2>Exercício 15: Tabela com Cabeçalho</h2>
+          <div class="exercicio">
+            <p>
+              Crie uma tabela com cabeçalho (&lt;th&gt;) contendo informações de
+              produtos: Nome, Preço e Quantidade
+            </p>
             <div class="codigo">
-                <textarea id="exercicio15" placeholder="Digite seu código aqui..."></textarea>
-                <button onclick="executarExercicio15()">Executar</button>
-                <div class="resultado" id="resultado15"></div>
+              <textarea
+                id="exercicio15"
+                placeholder="Digite seu código aqui..."
+              ></textarea>
+              <button onclick="executarExercicio15()">Executar</button>
+              <div class="resultado" id="resultado15"></div>
             </div>
+          </div>
         </div>
-    </div>
 
-    <div class="secao">
-        <h2>Exercício 16: Texto com Ênfase</h2>
-        <div class="exercicio">
-            <p>Crie um parágrafo usando tags de ênfase (&lt;em&gt;) e negrito (&lt;strong&gt;)</p>
+        <div class="secao">
+          <h2>Exercício 16: Texto com Ênfase</h2>
+          <div class="exercicio">
+            <p>
+              Crie um parágrafo usando tags de ênfase (&lt;em&gt;) e negrito
+              (&lt;strong&gt;)
+            </p>
             <div class="codigo">
-                <textarea id="exercicio16" placeholder="Digite seu código aqui..."></textarea>
-                <button onclick="executarExercicio16()">Executar</button>
-                <div class="resultado" id="resultado16"></div>
+              <textarea
+                id="exercicio16"
+                placeholder="Digite seu código aqui..."
+              ></textarea>
+              <button onclick="executarExercicio16()">Executar</button>
+              <div class="resultado" id="resultado16"></div>
             </div>
+          </div>
         </div>
-    </div>
 
-    <div class="secao">
-        <h2>Exercício 17: Menu de Navegação</h2>
-        <div class="exercicio">
+        <div class="secao">
+          <h2>Exercício 17: Menu de Navegação</h2>
+          <div class="exercicio">
             <p>Crie um menu de navegação usando lista não ordenada e links</p>
             <div class="codigo">
-                <textarea id="exercicio17" placeholder="Digite seu código aqui..."></textarea>
-                <button onclick="executarExercicio17()">Executar</button>
-                <div class="resultado" id="resultado17"></div>
+              <textarea
+                id="exercicio17"
+                placeholder="Digite seu código aqui..."
+              ></textarea>
+              <button onclick="executarExercicio17()">Executar</button>
+              <div class="resultado" id="resultado17"></div>
             </div>
+          </div>
         </div>
-    </div>
 
-    <div class="secao">
-        <h2>Exercício 18: Galeria de Imagens</h2>
-        <div class="exercicio">
-            <p>Crie uma galeria com 3 imagens lado a lado usando divs e estilo inline</p>
+        <div class="secao">
+          <h2>Exercício 18: Galeria de Imagens</h2>
+          <div class="exercicio">
+            <p>
+              Crie uma galeria com 3 imagens lado a lado usando divs e estilo
+              inline
+            </p>
             <div class="dica">
-                <strong>💡 Dica:</strong> Use style="display: inline-block" nas divs
+              <strong>💡 Dica:</strong> Use style="display: inline-block" nas
+              divs
             </div>
             <div class="codigo">
-                <textarea id="exercicio18" placeholder="Digite seu código aqui..."></textarea>
-                <button onclick="executarExercicio18()">Executar</button>
-                <div class="resultado" id="resultado18"></div>
+              <textarea
+                id="exercicio18"
+                placeholder="Digite seu código aqui..."
+              ></textarea>
+              <button onclick="executarExercicio18()">Executar</button>
+              <div class="resultado" id="resultado18"></div>
             </div>
+          </div>
         </div>
-    </div>
 
-    <div class="secao">
-        <h2>Exercício 19: Citações</h2>
-        <div class="exercicio">
-            <p>Use as tags &lt;blockquote&gt; e &lt;cite&gt; para criar uma citação com autor</p>
+        <div class="secao">
+          <h2>Exercício 19: Citações</h2>
+          <div class="exercicio">
+            <p>
+              Use as tags &lt;blockquote&gt; e &lt;cite&gt; para criar uma
+              citação com autor
+            </p>
             <div class="codigo">
-                <textarea id="exercicio19" placeholder="Digite seu código aqui..."></textarea>
-                <button onclick="executarExercicio19()">Executar</button>
-                <div class="resultado" id="resultado19"></div>
+              <textarea
+                id="exercicio19"
+                placeholder="Digite seu código aqui..."
+              ></textarea>
+              <button onclick="executarExercicio19()">Executar</button>
+              <div class="resultado" id="resultado19"></div>
             </div>
+          </div>
         </div>
-    </div>
 
-    <div class="secao">
-        <h2>Exercício 20: Mini Site</h2>
-        <div class="exercicio">
-            <p>Crie um mini site combinando vários elementos: cabeçalho, navegação, conteúdo principal e rodapé</p>
+        <div class="secao">
+          <h2>Exercício 20: Mini Site</h2>
+          <div class="exercicio">
+            <p>
+              Crie um mini site combinando vários elementos: cabeçalho,
+              navegação, conteúdo principal e rodapé
+            </p>
             <div class="dica">
-                <strong>💡 Dica:</strong> Use &lt;header&gt;, &lt;nav&gt;, &lt;main&gt; e &lt;footer&gt;
+              <strong>💡 Dica:</strong> Use &lt;header&gt;, &lt;nav&gt;,
+              &lt;main&gt; e &lt;footer&gt;
             </div>
             <div class="codigo">
-                <textarea id="exercicio20" placeholder="Digite seu código aqui..."></textarea>
-                <button onclick="executarExercicio20()">Executar</button>
-                <div class="resultado" id="resultado20"></div>
+              <textarea
+                id="exercicio20"
+                placeholder="Digite seu código aqui..."
+              ></textarea>
+              <button onclick="executarExercicio20()">Executar</button>
+              <div class="resultado" id="resultado20"></div>
             </div>
+          </div>
         </div>
+      </div>
+      <!-- fim #exercicios -->
+
+      <!-- Conteúdo da aba de exercícios CSS -->
+      <div id="exercicios-css" class="tab-content">
+        <div class="secao">
+          <h2>Exercícios de CSS</h2>
+          <p>
+            Pratique seletores, box model, Flexbox, Grid, pseudo-classes e
+            responsividade. Cada exercício tem um preview isolado abaixo.
+          </p>
+        </div>
+        <div id="css-exercises-root"></div>
+      </div>
     </div>
+    <!-- fim .main-content -->
 
     <!-- Painel de Ajuda Interativa -->
     <div class="help-panel">
-        <h3 class="help-title">
-            <span>🎓 Assistente de Aprendizado</span>
-        </h3>
+      <h3 class="help-title">
+        <span>🎓 Assistente de Aprendizado</span>
+      </h3>
 
-        <div class="help-section" id="current-exercise-help">
-            <h4>📝 Exercício Atual</h4>
-            <div class="example-card">
-                <p>Selecione um exercício para ver dicas e exemplos específicos!</p>
-            </div>
+      <div class="help-section" id="current-exercise-help">
+        <h4>📝 Exercício Atual</h4>
+        <div class="example-card">
+          <p>Selecione um exercício para ver dicas e exemplos específicos!</p>
         </div>
+      </div>
 
-        <div class="help-section">
-            <h4>🌟 Dicas Úteis</h4>
-            <ul class="help-tips">
-                <li>Sempre feche suas tags HTML</li>
-                <li>Use indentação para organizar o código</li>
-                <li>Teste diferentes valores nos atributos</li>
-                <li>Experimente combinar diferentes tags</li>
-            </ul>
-        </div>
+      <div class="help-section">
+        <h4>🌟 Dicas Úteis</h4>
+        <ul class="help-tips">
+          <li>Sempre feche suas tags HTML</li>
+          <li>Use indentação para organizar o código</li>
+          <li>Teste diferentes valores nos atributos</li>
+          <li>Experimente combinar diferentes tags</li>
+        </ul>
+      </div>
 
-        <div class="help-section">
-            <h4>📚 Links Úteis</h4>
-            <div class="reference-links">
-                <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">📖 MDN Web Docs - HTML</a>
-                <a href="https://www.w3schools.com/html/" target="_blank">🎯 W3Schools HTML Tutorial</a>
-                <a href="https://www.youtube.com/results?search_query=html+tutorial+iniciantes" target="_blank">🎥 Vídeos Tutoriais</a>
-            </div>
+      <div class="help-section">
+        <h4>📚 Links Úteis</h4>
+        <div class="reference-links">
+          <a
+            href="https://developer.mozilla.org/pt-BR/docs/Web/HTML"
+            target="_blank"
+            >📖 MDN Web Docs - HTML</a
+          >
+          <a href="https://www.w3schools.com/html/" target="_blank"
+            >🎯 W3Schools HTML Tutorial</a
+          >
+          <a
+            href="https://www.youtube.com/results?search_query=html+tutorial+iniciantes"
+            target="_blank"
+            >🎥 Vídeos Tutoriais</a
+          >
         </div>
+      </div>
 
-        <div class="help-progress">
-            <h4>📊 Seu Progresso</h4>
-            <div class="progress-bar">
-                <div class="progress-fill" id="progress-bar-fill"></div>
-            </div>
-            <p id="progress-text">0 de 20 exercícios completados</p>
+      <div class="help-progress">
+        <h4>📊 Seu Progresso</h4>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progress-bar-fill"></div>
         </div>
+        <p id="progress-text">0 de 20 exercícios completados</p>
+      </div>
     </div>
 
     <!-- Importando o arquivo JavaScript externo -->
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
