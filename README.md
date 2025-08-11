@@ -124,7 +124,7 @@ Se você tiver dúvidas ou algo não funcionar:
 
 Você está começando uma jornada incrível no mundo da programação! Cada exercício que você completar te torna um programador mais forte.
 
-Lembre-se: **Todo programador famoso começou exatamente como você** - com curiosidade e vontade de aprender! 🌟
+Lembre-se: **Todo programador famoso começou exatamente como vocês** - com curiosidade e vontade de aprender! 🌟
 
 ---
 
