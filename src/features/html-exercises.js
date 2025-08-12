@@ -1,4 +1,5 @@
 import { atualizarPainelAjuda } from './help.js';
+import { exerciseHelp } from '../data/exerciseHelp.js';
 import { salvarResposta } from '../core/storage.js';
 
 export function executarExercicio(numero) {
@@ -100,8 +101,8 @@ export function initHtmlExercises() {
     showBtn.addEventListener('click', function () {
       const hidden = solutionDiv.style.display === 'none';
       if (hidden) {
-        const example = document.querySelector('#current-exercise-help pre');
-        solutionPre.textContent = example ? example.textContent : '';
+        const sol = (exerciseHelp[i] && exerciseHelp[i].example) ? exerciseHelp[i].example : '';
+        solutionPre.textContent = sol;
         solutionDiv.style.display = 'block';
         useBtn.style.display = 'inline-block';
         showBtn.textContent = 'Ocultar resposta';
@@ -113,8 +114,7 @@ export function initHtmlExercises() {
     });
 
     useBtn.addEventListener('click', function () {
-      const example = document.querySelector('#current-exercise-help pre');
-      const sol = example ? example.textContent : '';
+      const sol = (exerciseHelp[i] && exerciseHelp[i].example) ? exerciseHelp[i].example : '';
       textArea.value = sol;
       salvarResposta(i, sol);
       executarExercicio(i);
